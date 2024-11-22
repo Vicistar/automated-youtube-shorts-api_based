@@ -3,7 +3,8 @@ import aiohttp
 from db_setup import ScrapedVideo, Session
 
 # Fetch Instagram media asynchronously
-async def fetch_videos(api_url, access_token, user_ids):
+access_token = "IGQWROajc4Sk83MWlGQVVYVHFRTG1qSXhEWktyVTJ6Q2FWQWI4aHp3bzdKbEcyTXROTVktYXN0NU9ERXRTRkJ5SS1RdVduNjA2MTRNWkJyUnYzaUpicjh5VHhhVWhWQmlNWEp3WGtQQUNVaUk5RzIwcUhoRzFaZAzQZD"
+async def fetch_videos(api_url, user_ids):
     session = Session()
     async with aiohttp.ClientSession() as client:
         for user_id in user_ids:
